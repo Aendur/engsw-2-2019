@@ -6,7 +6,7 @@ Universidade de Brasíla
 2/2019
 
 Autores:
-nyo :leopard:
-aen :fox_face:
-giraman :tiger2:
+* nyo :leopard:
+* aen :fox_face:
+* giraman :tiger2:
 
