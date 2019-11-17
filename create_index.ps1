@@ -3,7 +3,7 @@ write-output "Clique nos links para acessar a documenta$([char]0x00e7)$([char]0x
 write-output "dos artefatos do projeto. A numera$([char]0x00e7)$([char]0x00e3)o dos documentos correspondem"  |  out-file "index.md" -append -encoding utf8
 write-output "$([char]0x00e0) numera$([char]0x00e7)$([char]0x00e3)o dos itens na especifica$([char]0x00e7)$([char]0x00e3)o do trabalho, fornecida pelo"  |  out-file "index.md" -append -encoding utf8
 write-output "professor. Os planos de itera$([char]0x00e7)$([char]0x00e3)o s$([char]0x00e3)o numerados da seguinte forma:<br/>"  |  out-file "index.md" -append -encoding utf8
-write-output "``Itera$([char]0x00e7)$([char]0x00e3)o <sprint>-<itens prduzidos>``"  |  out-file "index.md" -append -encoding utf8
+write-output "``Itera$([char]0x00e7)$([char]0x00e3)o <sprint>-<itens prduzidos>.pdf``"  |  out-file "index.md" -append -encoding utf8
 
 
 
