@@ -4,7 +4,7 @@ Ciência da Computação da Universidade de brasília, ministrada pelo professor
 Fernando Albuquerque, 2º semestre de 2019.
 
 ## Autores
-* nyo :leopard:
+* nyo :turtle:
 * aen :fox_face:
 * giraman :tiger2:
 
