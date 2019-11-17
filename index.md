@@ -1,4 +1,10 @@
-﻿* [01. Processo definido de projeto](https://github.com/Aendur/engsw-2-2019/blob/master/01.%20Processo%20definido%20de%20projeto/Project%20Defined%20Process.pdf)
+﻿## Artefatos
+Clique nos links para acessar a documentação referente a cada um
+dos artefatos do projeto. A numeração dos documentos correspondem
+à numeração dos itens na especificação do trabalho, fornecida pelo
+professor. Os planos de iteração são numerados da seguinte forma:<br/>
+`Iteração <sprint>-<itens prduzidos>`
+* [01. Processo definido para o projeto](https://github.com/Aendur/engsw-2-2019/blob/master/01.%20Processo%20definido%20para%20o%20projeto/Project%20Defined%20Process.pdf)
 * [02. Plano de projeto](https://github.com/Aendur/engsw-2-2019/blob/master/02.%20Plano%20de%20projeto/Plano%20de%20projeto.pdf)
 * 03\. Planos de Iteração
     * [Iteração 1-1.pdf](https://github.com/Aendur/engsw-2-2019/blob/master/03.%20Planos%20de%20itera%C3%A7%C3%A3o/Itera%C3%A7%C3%A3o%201-1.pdf)
@@ -17,6 +23,6 @@
 * [05. Diagrama de casos de uso](https://github.com/Aendur/engsw-2-2019/blob/master/05.%20Diagrama%20de%20casos%20de%20uso/Diagrama%20de%20casos%20de%20uso.pdf)
 * [06. Ferramentas](https://github.com/Aendur/engsw-2-2019/blob/master/06.%20Ferramentas/Ferramentas.pdf)
 * [08. Infraestrutura](https://github.com/Aendur/engsw-2-2019/blob/master/08.%20Infraestrutura/Infraestrutura.pdf)
-* [09. Controle de versões](https://github.com/Aendur/engsw-2-2019/blob/master/09.%20Controle%20de%20versões/Controle%20de%20versões.pdf)
+* [09. Processo de Controle de versões](https://github.com/Aendur/engsw-2-2019/blob/master/09.%20Processo%20de%20Controle%20de%20versões/Controle%20de%20versões.pdf)
 * [10. Comprovação do uso de controle de versões](https://github.com/Aendur/engsw-2-2019/blob/master/10.%20Comprova%C3%A7%C3%A3o%20do%20uso%20de%20controle%20de%20versões/Controle%20de%20versões%20-%20comprova%C3%A7%C3%A3o.pdf)
 * [11. Descrição do Processo de Testes](https://github.com/Aendur/engsw-2-2019/blob/master/11.%20Descri%C3%A7%C3%A3o%20do%20Processo%20de%20Testes/Descri%C3%A7%C3%A3o%20do%20Processo%20de%20Testes%20Adotado.pdf)
