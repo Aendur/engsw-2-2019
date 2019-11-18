@@ -9,6 +9,6 @@ Fernando Albuquerque, 2º semestre de 2019.
 * giraman :tiger2: Thiago Pereira Ribeiro Dantas  14/0170961
 
 ## Artefatos
-Acesse o [índice do projeto](https://github.com/Aendur/engsw-2-2019/blob/master/index.md) para
-visualizar a documentação do projeto.
+Acesse o [índice da documentação](https://github.com/Aendur/engsw-2-2019/blob/master/index.md) para
+visualizar a documentação do projeto ou acesse o [código fonte](https://github.com/Aendur/engsw-2-2019/tree/master/13.%20App.%20GiraCarona%20e%20XCTests) da implementação do projeto.
 
