@@ -1,0 +1,68 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033\deflangfe1041{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\froman\fprq2\fcharset0 Times;}{\f2\fnil\fcharset0 Arial;}{\f3\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red0\green0\blue255;}
+{\stylesheet{ Normal;}{\s1 heading 1;}}
+{\*\generator Riched20 10.0.18362}{\*\mmathPr\mdispDef1\mwrapIndent1440 }\viewkind4\uc1 
+\pard\nowidctlpar\qc\b\f0\fs36 <Project Name>\par
+Architecture Notebook\par
+
+\pard\nowidctlpar\sl240\slmult0\qj\b0\fs20\par
+\cf1\v\f1 There is guidance within this template that appears in a style named InfoBlue. This style has a hidden font attribute that allows you to toggle whether it is visible or hidden in this template. Use the \cf0\f0 Microsoft\super\'ae \nosupersub Word\super\'ae\cf1\nosupersub\f1  menu \b Tools > Options > View > Hidden Text \b0 check box to toggle this setting. There is also an option for printing: \b Tools > Options > Print\b0 .\par
+\v0\par
+
+\pard\keepn\nowidctlpar\s1\fi-360\li360\sb120\sa60\sl240\slmult0\qj\cf0\b\f0\fs24 1.\tab Proposito\par
+
+\pard\nowidctlpar\sl240\slmult0\qj\b0\fs20\par
+Este documento descreve a filosofia, decis\'f5es, restri\'e7\'f5es, elementos importantes e quaisquer outros aspectos que envolvem o sistema que d\'e1 forma ao design e implementa\'e7\'e3o.\par
+
+\pard\keepn\nowidctlpar\s1\fi-360\li360\sb120\sa60\sl240\slmult0\qj\b 2.\tab\fs24 Objetivos e Filosofia Arquitetural\par
+
+\pard\keepn\nowidctlpar\s1\sb120\sa60\sl240\slmult0\qj\b0\fs20\tab A arquitetura escolhida ser\'e1 MVC pois \'e9 simples de se compreender para um primeiro desenvolvimento, O sistema ter\'e1 problemas com manuten\'e7\'e3o pois \'e9 comum boa parte do codigo se  acumular nas controllers, o time ter\'e1 de lidar com a aprendizagem da lingaugem Swift e como o sistema contar\'e1 com transa\'e7\'f5es financeiras \'e9 necess\'e1rio manuten\'e7\'e3o para garantir integridade da seguran\'e7a com certa periodicidade.\line\line\tab Os objetivos criticos incluem: Cadastro, Login, Recupera\'e7\'e3o de senha, Cadastro de Viagens, Aceitar Viagens, Integra\'e7\'e3o com servi\'e7o de cart\'e3o de cr\'e9ditos (pagamentos). Respeitando esses objetivos o aplicativo deve funcionar para a maioria dos casos (assumindo que cancelamentos de viagens ocorreriam com menor frequencia).\b\par
+
+\pard\keepn\nowidctlpar\s1\fi-360\li360\sb120\sa60\sl240\slmult0\qj 3.\tab\fs24 Assum\'e7\'f5es e Depend\'eancias\par
+
+\pard\keepn\nowidctlpar\s1\sb120\sa60\sl240\slmult0\qj\b0\fs20\tab Uma aplica\'e7\'e3o que armazena dados cadastrais deve zelar pela seguran\'e7a dos dados de seus clientes, CPF, nome, endere\'e7o, telefone, cart\'e3o de cr\'e9dito, conta do Paypal... Para isso os dados sensiveis dos clientes ser\'e3o armazenados na forma de um Hash com criptografia SHA-256.\line\tab Outra preocupa\'e7\'e3o \'e9 com a seguran\'e7a das transa\'e7\'f5es, para isso usaremos API's de entidades financeiras, Visa, Mastercard, Paypal. Elas tem suas regras de uso e documenta\'e7\'e3o se adequar as exigencias de cada uma delas nos d\'e1 acesso as medidas de seguran\'e7a j\'e1 implementadas pelas companhias e a comodidade de n\'e3o ter de implementar nada quanto a essas transa\'e7\'f5es e convencer a qualquer uma das institui\'e7\'f5es que suas transa\'e7\'f5es.\par
+\tab A ultima preocupa\'e7\'e3o que temos \'e9 de exibir os trajetos de maneira correta, isso demanda a exibi\'e7\'e3o de um mapa, para evitar o retrabalho de implementar algo como o google maps ou apple maps, usaremos a API do google maps para exibir e marcar rotas.\par
+\tab Definidas as necessidades de Criptografia e de escolher uma lingaugem suportada pelas API's/Frameworks selecionadas, escolhemos a linguagem Swift, por ser a linguagem adotada pela Apple no desenvolvimento de aplicativos para iOS, suportarem as API's mencionadas, como tamb\'e9m conta com bibliotecas de criptografia e contar com diversos tutoriais gratuitos na internet.\cf1\f1\par
+
+\pard\keepn\nowidctlpar\s1\fi-360\li360\sb120\sa60\sl240\slmult0\qj\cf0\b\f0 4.\tab\fs24 Requerimentos Arquiteturalmente necess\'e1rios.\par
+{\b0\f2\fs20{\field{\*\fldinst{HYPERLINK https://developer.visa.com/ }}{\fldrslt{https://developer.visa.com/\ul0\cf0}}}}\b0\f2\fs20  (API de pagamento para cart\'f5es visa)\par
+{{\field{\*\fldinst{HYPERLINK https://developer.mastercard.com/apis }}{\fldrslt{https://developer.mastercard.com/apis\ul0\cf0}}}}\f2\fs20  (API mastercard)\par
+{{\field{\*\fldinst{HYPERLINK https://developer.paypal.com/ }}{\fldrslt{https://developer.paypal.com/\ul0\cf0}}}}\f2\fs20  (API Paypal)\par
+
+\pard\keepn\nowidctlpar\s1\sb120\sa60\sl240\slmult0\qj {{\field{\*\fldinst{HYPERLINK https://developer.apple.com/security/ }}{\fldrslt{https://developer.apple.com/security/\ul0\cf0}}}}\f2\fs20  (campos: "Protecting User Data" e "Cryptographic Interfaces").\cf1\par
+
+\pard\keepn\nowidctlpar\s1\fi-360\li360\sb120\sa60\sl240\slmult0\qj\cf0\b\f0 5.\tab\fs24 Decis\'f5es, Restri\'e7\'f5es e Justificativas\par
+
+\pard\keepn\nowidctlpar\s1\sb120\sa60\sl240\slmult0\qj\b0\fs20\tab A escolha da arquitetura se deu pela simplicidade, existem modelos mais maduros que trazem beneficios diversos com uma maior complexidade para se aprender durante 6 meses e com responsabilidades diversas al\'e9m do projeto.\par
+\tab A linguagem de programa\'e7\'e3o, Swift, pelo mesmo motivo, Open source e criada para substituir o objC da Apple, \'e9 voltado para desenvolvimento mobile e conta com v\'e1rias frameworks de testes, pagamentos e comunica\'e7\'e3o com bancos de dados. Como linguagem conta com menos liberdade que C, mas restri\'e7\'f5es vem com comodidades pois acesso \'e0 v\'e1riaveis \'e9 implicitamente feito por getters e setters.\par
+\tab A restri\'e7\'e3o de lidar com pagamentos vai ser\'e1 feita atr\'e1ves de API's de institui\'e7\'f5es financeiras, o motivo \'e9 simples, essas institui\'e7\'f5es fornecem um framework ao qual n\'f3s apenas precisamos nos adequar e gosamos tamb\'e9m da seguran\'e7a fornecida pela empresa que fornece a API, nos poupando tamb\'e9m as dificuldades de aprender como implementar tais transi\'e7\'f5es.\par
+\tab Para poder mostrar as rotas e tracking do percurso, cada celular conta com localiza\'e7\'e3o GPS que serve para monitorar viagens e para exibir percursos e mapas precisamos de integra\'e7\'e3o da API do Google maps por sua popularidade e robustez.\par
+\tab Com a escolha da linguagem os membros que n\'e3o contam com uma maquina que contenha o macOS ter\'e3o de contornar este impedimento atrav\'e9s de algum servi\'e7o de acesso remoto para alugar uma maquina com o OS e poder programar em Swift.\par
+
+\pard\keepn\nowidctlpar\s1\fi-360\li360\sb120\sa60\sl240\slmult0\qj\b 6.\tab\fs24 Architectural Mechanisms\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\keepn\nowidctlpar\s1\fi-360\li720\sb120\sa60\sl240\slmult0\qj\fs20 Modulo de Login (Login/Cadastro Usuario).\b0\par
+
+\pard\keepn\nowidctlpar\s1\sb120\sa60\sl240\slmult0\qj\tab Este modulo engloba a implementa\'e7\'e3o das classes dos usu\'e1rios (motorista/ carona), valida\'e7\'e3o de e-mail e CPF, bem como a criptografia dos dados como um todo. - Implementado Parcialmente.\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\keepn\nowidctlpar\s1\fi-360\li720\sb120\sa60\sl240\slmult0\qj\b Modulo de Viagens (Cadastro Carona/Cancelar Carona/Pedir Carona/ Recusar Carona).\b0\par
+
+\pard\keepn\nowidctlpar\s1\sb120\sa60\sl240\slmult0\qj\tab Esse modulo engloba a implementa\'e7\'e3o das classes de carona (horario de saida, custo, dura\'e7\'e3o, vagas), valida\'e7\'e3o de cancelametos, valida\'e7\'e3o de vagas disponiveis ao solicitar vaga. - N\'e3o Implementado.\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\keepn\nowidctlpar\s1\fi-360\li720\sb120\sa60\sl240\slmult0\qj\b Modulo de Pagamento (Integra\'e7\'e3o com API's).\b0\par
+
+\pard\keepn\nowidctlpar\s1\sb120\sa60\sl240\slmult0\qj\tab Esse modulo consiste de se adequar as diferentes API's de pagamento listadas, cada API tem suas regras de negocio e seguran\'e7a, ao respeitar as respectivas regras contamos com a estrutura de seguran\'e7a j\'e1 estabelecida de cada API com os dados dos clientes. - N\'e3o Implementado. \f1\par
+
+\pard\keepn\nowidctlpar\s1\fi-360\li360\sb120\sa60\sl240\slmult0\qj\b\f0 7.\tab\fs24 Abstra\'e7\'f5es Chave\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\keepn\nowidctlpar\s1\fi-360\li720\sb120\sa60\sl240\slmult0\qj\fs20 Cadastro e Login: Formul\'e1rio de cadastro com valida\'e7\'e3o e autentica\'e7\'e3o.\par
+{\pntext\f3\'B7\tab}Pagamento: Integra\'e7\'e3o com API's de pagamento.\par
+{\pntext\f3\'B7\tab}Sistema de Caronas: Oferecer carona, Aceitar Carona e respectivos cancelamentos exibindo rota no mapa (API Maps) e valida\'e7\'f5es para as a\'e7\'f5es.\b0\f1\par
+
+\pard\keepn\nowidctlpar\s1\fi-360\li360\sb120\sa60\sl240\slmult0\qj\b\f0 8.\tab\fs24 Camadas ou arquitetura de Framework\par
+
+\pard\widctlpar\sa120\sl240\slmult0\qj\tx540\tx1260\cf1\b0\f1\fs20\par
+
+\pard\keepn\nowidctlpar\s1\fi-360\li360\sb120\sa60\sl240\slmult0\qj\cf0\b\f0 9.\tab\fs24 Vistas de arquitetura\b0\fs20\par
+}
+ 
