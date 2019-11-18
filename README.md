@@ -1,4 +1,4 @@
-# engsw-2-2019
+# GiraCarona
 Projeto da disciplina Engenharia de Software, turma B, do Departamento de
 Ciência da Computação da Universidade de Brasília, ministrada pelo professor
 Fernando Albuquerque, 2º semestre de 2019.
