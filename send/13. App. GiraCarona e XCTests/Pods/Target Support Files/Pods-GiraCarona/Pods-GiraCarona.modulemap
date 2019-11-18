@@ -1,0 +1,6 @@
+framework module Pods_GiraCarona {
+  umbrella header "Pods-GiraCarona-umbrella.h"
+
+  export *
+  module * { export * }
+}

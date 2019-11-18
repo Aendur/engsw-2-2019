@@ -1,0 +1,25 @@
+Projeto da disciplina Engenharia de Software
+Departamento de Ciência da Computação
+Universidade de Brasília
+
+Professor: Fernando Albuquerque
+Turma B
+2º semestre de 2019.
+
+Autores:
+	Frederico de Paiva Lenza 14/0082221
+	Diogo Cesar Ferreira 11/0027931
+	Thiago Pereira Ribeiro Dantas 14/0170961
+
+
+Os artefatos referentes a cada um dos itens do projeto está organizada nas pastas.
+A numeração das documentos corresponde à numeração dos itens na especificação do
+trabalho, fornecida pelo professor. Os planos de iteração são numerados da seguinte forma:
+
+Iteração <sprint>-<itens prduzidos>.pdf
+
+
+Este projeto também está hospedado em um repositório público, e pode ser acessado
+através do link:
+
+https://github.com/Aendur/engsw-2-2019
